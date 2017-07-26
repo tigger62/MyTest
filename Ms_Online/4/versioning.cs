@@ -25,7 +25,7 @@ class MyDerived : MyBase
    }
    // Explicitly hide the virtual method Meth2 using the new
    // keyword:
-   public new string Meth2() 
+   public new string Meth2()
    {
       return "MyDerived-Meth2";
    }
