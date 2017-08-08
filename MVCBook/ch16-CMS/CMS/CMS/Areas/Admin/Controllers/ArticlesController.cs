@@ -51,6 +51,11 @@ namespace CMS.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 article.ID = Guid.NewGuid();
+                article.CreateDate = DateTime.Now;
+                article.UpdateDate = DateTime.Now;
+                //因為還沒有做會員以先給假的;
+                article.CreateUser = Guid.Empty;
+                article.UpdateUser = Guid.Empty;
                 db.Article.Add(article);
                 db.SaveChanges();
                 return RedirectToAction("Index");
