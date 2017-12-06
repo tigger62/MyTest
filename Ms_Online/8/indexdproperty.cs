@@ -17,8 +17,7 @@ public class Document
         // character "begin", for word number "wordCount." Returns false
         // if there are less than wordCount words. Sets "start" and
         // length" to the position and length of the word within text:
-        private bool GetWord(char[] text, int begin, int wordCount, 
-                                       out int start, out int length) 
+        private bool GetWord(char[] text, int begin, int wordCount, out int start, out int length) 
         { 
             int end = text.Length;
             int count = 0;
@@ -180,7 +179,7 @@ class Test
         for (int i = 0; i < d.Words.Count; ++i) 
         {
             if (d.Words[i] == "peter") 
-                d.Words[i] = "penelope";
+                d.Words[i] = "aaa";
         }
 
         // Change character "p" to "P"
