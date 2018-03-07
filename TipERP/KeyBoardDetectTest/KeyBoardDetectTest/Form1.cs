@@ -22,7 +22,7 @@ namespace KeyBoardDetectTest
         {
             gHook = new GlobalKeyboardHook();
             gHook.KeyDown += new KeyEventHandler(gHook_keyDown);
-            foreach (Keys key in Enum.GetValues(typeof(keys)))
+            foreach (Keys key in Enum.GetValues(typeof(Keys)))
                 gHook.HookedKeys.Add(key);
         }
 
