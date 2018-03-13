@@ -19,9 +19,9 @@ namespace AutoClosedProcess
 
             Program s = new Program();
             string sw, ProcessName, user;
-
-            
+     
             sw = args[0].Length > 0 ? args[0] : "";
+            //取得使用者帳號
             user = WindowsIdentity.GetCurrent().Name;
             ProcessName = args[1].Length > 1 ? args[1] : "";
 
@@ -39,15 +39,19 @@ namespace AutoClosedProcess
                     s.IsProcessExist(ProcessName);
                     break;
             }
+
+            while (true) ;
         }
 
         //啟動應用程式
         private void StartProcess(string ProcessName)
         {
+            int processId;
+
             try
             {
-                Process.Start(ProcessName);
-                Console.WriteLine(Process.Start(ProcessName).Id);
+                processId = Process.Start(ProcessName).Id;
+                Console.WriteLine(processId);
             }
             catch (Exception ex)
             {
